@@ -1,4 +1,4 @@
-# 1/23/2024
+## 1/23/2024
 
 ### 1. 项目结构设置
 
@@ -28,4 +28,9 @@
 
 - 将初始化代码push进github仓库的main中
 
-7.安装mongodb
+### 7.安装mongodb
+
+- **在Node.js项目中使用MongoDB**:
+  - 安装 Mongoose 或 MongoDB Node.js驱动程序
+
+准备阶段已完成
