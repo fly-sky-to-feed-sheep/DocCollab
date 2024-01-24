@@ -1,11 +1,22 @@
 const express = require('express');
+// const connectDB = require('./db');
+const fakeAuth = require('./routes/fakeAuth');
+
+
+require('dotenv').config();
+
+// connectDB();
+const cors = require('cors');
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use(cors());
+app.use(express.json());
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+
+app.use(express.json());
+
+app.use('/api', fakeAuth);
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
